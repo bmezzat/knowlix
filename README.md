@@ -22,4 +22,3 @@ my-project/
 
 ## Notes
 - The project uses `.env.example` files in both backend and frontend. Copy and fill them with your environment variables.
-- The backend currently uses SQLite for testing; switch to a production-ready DB for deployment.
