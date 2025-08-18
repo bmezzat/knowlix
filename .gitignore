@@ -1,0 +1,9 @@
+# Ignore for both backend and frontend
+**/node_modules/
+**/.env
+**/package-lock.json
+**/yarn.lock
+**/dist/
+**/build/
+**/.next/
+.Ignoredea/

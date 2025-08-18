@@ -1,0 +1,40 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  line-height: 120%;
+  font-synthesis: style;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.panel-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.panel-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+.panel-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.panel-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
