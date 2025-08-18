@@ -23,6 +23,12 @@
 - `POST /searches` – Save a search query
 - `DELETE /searches/:id` – Delete a saved search
 
+### Database
+
+For local development and testing, this project uses SQLite to store user search history and user Preferences.  
+**Note:** SQLite is **not recommended for production**. In a production environment, consider switching to a more robust database such as **PostgreSQL** or **MySQL**.
+
+
 ### Run backend
 
 ```bash
