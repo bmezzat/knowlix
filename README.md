@@ -10,8 +10,8 @@
 
 ```markdown
 my-project/
-├── backend/    # API server (see (backend/README.md))
-└── frontend/   # Client app (see (frontend/README.md))
+├── backend/    # API server (see backend/README.md)
+└── frontend/   # Client app (see frontend/README.md)
 ```
 
 
