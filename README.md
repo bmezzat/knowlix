@@ -7,9 +7,12 @@
 - **Database:** SQLite (for local/testing), switchable to PostgreSQL/MySQL in production
 
 ## Project Structure
+
+```markdown
 my-project/
-├─ backend/ # API server (see backend/README.md)
-├─ frontend/ # Client app (see frontend/README.md)
+├── backend/    # API server (see [backend README](backend/README.md))
+└── frontend/   # Client app (see [frontend README](frontend/README.md))
+```
 
 
 ## Getting Started
