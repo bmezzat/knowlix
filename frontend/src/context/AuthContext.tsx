@@ -184,7 +184,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } else {
       const idTokenFromStorage = localStorage.getItem('idToken');
       const accessTokenFromStorage = localStorage.getItem('accessToken');
-      const refreshTokenFromStorage = localStorage.getItem('refreshToken');
 
       if (idTokenFromStorage && accessTokenFromStorage) {
         setIdToken(idTokenFromStorage);
