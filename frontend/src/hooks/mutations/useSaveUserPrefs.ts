@@ -10,7 +10,7 @@ export const useSaveUserPrefs = () => {
       await queryClient.cancelQueries({ queryKey: ['userPrefs'] });
       // Cach old results
       const previous = queryClient.getQueryData<Record<string, any>>(['userPrefs']);
-
+      // Optimistically update cache
       queryClient.setQueryData(['userPrefs'], (old: unknown) => {
         if (!old || typeof old !== 'object') return newPrefs;
         return { ...old, ...newPrefs };

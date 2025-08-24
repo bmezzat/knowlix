@@ -8,6 +8,7 @@ export const useSaveSearch = () => {
     mutationFn: (query: string) => saveSearch(query),
     onMutate: async (newSearch) => {
       await queryClient.cancelQueries({ queryKey: ['searchHistory'] });
+      // Cach old results
       const previous = queryClient.getQueryData<string[]>(['searchHistory']);
       // Optimistically update cache
       queryClient.setQueryData(['searchHistory'], (old: string[] | undefined) => {

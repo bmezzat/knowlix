@@ -9,7 +9,7 @@ export async function processCommand(command: string, userId: any) {
   const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
   if (usrMessage === "get search history") {
-    await sleep(500);
+    await sleep(800);
     const history = listSearches(userId);
     const list: string[] = [];
     history.sort((a: any, b: any) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime())
@@ -29,13 +29,13 @@ export async function processCommand(command: string, userId: any) {
     });
     return list.join('\n');
   } else if (usrMessage === 'get my preferences') {
-    await sleep(500);
+    await sleep(800);
     const preferences = getPrefs(userId);
     const formattedPrefs = JSON.stringify(preferences, null, 2);
     console.log(formattedPrefs)
     return `Preferences is:\n${formattedPrefs}`;
   } else if (usrMessage.startsWith('delete search')) {
-    await sleep(200);
+    await sleep(400);
     searchQuery = parts[2];
     if (!searchQuery) {
       return "No ID provided, Please provide a valid ID to delete";
@@ -43,7 +43,7 @@ export async function processCommand(command: string, userId: any) {
     deleteSearchById(userId, searchQuery);
     return "Search deleted successfully";
   } else if (usrMessage.startsWith("save my preferences")) {
-    await sleep(200);
+    await sleep(700);
     searchQuery = parts[3];
     if (!searchQuery) {
       return {status: "error", message: "No Preference provided"};
